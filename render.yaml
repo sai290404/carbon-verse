@@ -2,7 +2,7 @@ services:
   - type: web
     name: carbonverse
     runtime: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "pip install setuptools wheel && pip install -r requirements.txt"
     startCommand: "streamlit run app.py --server.port=10000 --server.address=0.0.0.0"
     env: python
     region: oregon
